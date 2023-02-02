@@ -103,5 +103,5 @@ Use your final vector of numbers as indices for `my_symbols` to discover the fin
 Google the first line of this message, if you do not recognize it, to see what it is.
 
 
-Write 3-4 sentences about what you learned from this investigation. What problems did you encounter, and how did you solve them?
+Write 3-4 sentences about what you learned from this investigation. What problems did you encounter, and how did you solve them? Could you do the same tasks in Python? Why or why not?
 
