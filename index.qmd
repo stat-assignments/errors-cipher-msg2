@@ -1,5 +1,7 @@
 ---
 title: "decodeR:  Base R"
+execute:
+  error: true
 output: html_document
 ---
 
@@ -9,6 +11,7 @@ This assignment is modified from the [decodeR](https://github.com/kbodwin/decode
 In this assignment, you will be creating and manipulating vectors, lists, and data frames to uncover a top secret message.
 
 Some advice:
+
 * Work with those around you
 * Google is your friend!  If an error is confusing, copy it into Google and see what other people are saying.  If you don't know how to do something, search for it.
 * Just because there is no error message doesn't mean everything went smoothly.  Use the console to check each step and make sure you have accomplished what you wanted to accomplish.
@@ -75,7 +78,7 @@ By altering this top secret set of numbers, you will be able to create a message
 
 1. Add 14 to every number.
 2. Multiply every number by 18, then subtract 257.
-3. Exponentiate every number.  (That is, do e^[number].)
+3. Exponentiate every number.  (That is, do e\^[number].)
 4. Square every number.
 
 **Checkpoint:** Headquarters has informed you that at this stage of decoding, there should be 352 numbers in the secret message that are below 17.
