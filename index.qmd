@@ -72,7 +72,7 @@ This chunk will load up the encoded secret message as a vector:
 
 ```{r}
 
-top_secret <- read.csv("Secret_Code", header = FALSE)
+top_secret <- read.csv("Secret_Code", header = T)$V1
 
 ```
 
