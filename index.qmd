@@ -2,6 +2,7 @@
 title: "decodeR:  Base R"
 execute:
   error: true
+author: "Your Name"
 output: html_document
 ---
 
@@ -29,7 +30,7 @@ lower_case <- c("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
 
 upper_case <- c("A", "B", "C", "D", "E", "F", "G", "H" "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z")
 
-punctuation <- c(".", ",", "!", "?", "'", """, "(", ")", " ", "-", ";", ":")
+punctuation <- c(".", ",", "!", "?", "'", """, "(", ")", " ", "-", ";", ":", "\n")
 
 ```
 
