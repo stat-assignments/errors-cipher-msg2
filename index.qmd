@@ -1,5 +1,5 @@
 ---
-title: "decodeR:  Base R"
+title: "decodeR: Data Types and Indexing"
 execute:
   error: true
 author: "Your Name"
