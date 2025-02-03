@@ -1,0 +1,128 @@
+---
+title: "decodeR: Data Types and Indexing"
+execute:
+  error: true
+author: "Your Name"
+output: html_document
+---
+
+This assignment is modified from the [decodeR](https://github.com/kbodwin/decodeR) exercises by Kelly Bodwin and Allison Theobold.
+
+
+In this assignment, you will be creating and manipulating vectors, lists, and data frames to uncover a top secret message.
+
+Some advice:
+
+* Work with those around you
+* Google is your friend!  If an error is confusing, copy it into Google and see what other people are saying.  If you don't know how to do something, search for it.
+* Just because there is no error message doesn't mean everything went smoothly.  Use the console to check each step and make sure you have accomplished what you wanted to accomplish.
+
+
+## Part One: Setup
+
+Each of the following R chunks will cause an error and/or do the desired task incorrectly.  Find the mistake, and correct it to complete the intended action. For each error, write 1-2 sentences to reflect on what the mistake was and how you found it and fixed it.
+
+1. Create vectors containing the upper case letters, lower case letters, and some punctuation marks.
+
+```{python, error = T}
+lower_case = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+
+upper_case = ["A", "B", "C", "D", "E", "F", "G", "H" "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+punctuation = [".", ",", "!", "?", "'", """, "(", ")", " ", "-", ";", ":", "\n", "[", "]"]
+
+```
+
+2. Make one long vector containing all the symbols.
+
+```{python, error = T}
+
+my_symbols = lower_case + upper_case + numbers + punctuation
+
+```
+
+3. Turn the `my_symbols` vector into a data frame, with the variable name "Symbol"
+
+```{python, error = T}
+import pandas as pd
+
+my_symbols = pd.DataFrame(my_symbols, columns=[Symbol])
+```
+
+
+4. Find the total number of symbols we have in our data frame.  
+
+```{python, error = T}
+len = my_symbols.shape
+```
+
+
+5. Create a new variable in your dataframe that assigns a number to each symbol.
+
+```{python, error = T}
+my_symbols[Num] <- range(1, len)
+```
+
+
+
+## Part Two: Decoding the secret message.
+
+This chunk will load up the encoded secret message as a vector:
+
+```{python}
+import pandas as pd
+
+top_secret = pd.read_csv('Secret_Code')['x']
+
+```
+
+By altering this top secret set of numbers, you will be able to create a message.  Write your own code to complete the steps below.
+
+1. Add 14 to every number.
+2. Multiply every number by 18, then subtract 257.
+3. Exponentiate every number.  (That is, do e\^[number].)
+4. Square every number.
+
+
+**Checkpoint:** Headquarters has informed you that at this stage of decoding, there should be 989 numbers in the secret message that are below 17.
+
+
+5. Turn your vector of numbers into a matrix with 3 columns.
+6. Create a new vector, `evens`, containing all of the even numbers between 1 and 1394. That is, "evens" should contain 2, 4, 6, 8 ..., 1394. Note that `evens` is a separate object - you should not use your encoded vector or matrix to come up with this new vector. 
+7. Subtract the "evens" vector from the first column of your secret message matrix.
+8. Subtract 100 from all numbers in the 18-24th rows of the 3rd column.
+9. Multiply all numbers in the 2nd and 3rd column by 2.
+10. Turn your matrix back into a vector.
+11. Round all of the numbers in your vector to the nearest integer.
+
+**Checkpoint:** Headquarters has informed you that at this stage of decoding, there are 621 numbers which are evenly divisible by 5.
+
+
+12. Take the square root of all numbers in indices 38 to 365
+13. Replace all instances of the number 39 with 20.
+
+**Checkpoint:** Headquarters has informed you that your final message should have 676 even numbers.
+
+
+## Part 3: The secret message!
+
+Use your final vector of numbers as indices for `my_symbols` to discover the final message!  
+If you store the decrypted characters as `decrypted_str` below, the rest of the code will nicely format the message for you.
+Google the first few lines of this message, if you do not recognize it, to see what it is.
+
+```{python decrypt-the-message}
+decrypted_str = ""
+
+# Join the characters together with no separator
+decrypted_str = ''.join(decrypted_str) 
+# print the message
+print(decrypted_str)  
+```
+
+
+
+
+Write 3-4 sentences about what you learned from this investigation. What problems did you encounter, and how did you solve them? Could you do the same tasks in R? Why or why not?
+
